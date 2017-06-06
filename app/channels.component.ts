@@ -27,6 +27,9 @@ import * as cfg from  './config';
         background-color: lightgrey;
         text-decoration: none;
     }
+    .gallery span:hover { 
+        background-color: yellow;
+    }
     `]
 })
 export class ChannelsComponent implements OnInit {
@@ -48,7 +51,7 @@ isMobile(): boolean {
 }
 
 getChannels() {
-    let url = cfg._vdrurl + ':8002/channels.json?start=0&limit=0';
+    let url = cfg._vdrurl + ':8002/channels.json?start=0&limit=61';
     console.log(url);
     return this._http.get(url).map(res => res.json());
 }

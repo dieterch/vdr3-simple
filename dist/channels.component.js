@@ -29,7 +29,7 @@ var ChannelsComponent = (function () {
         return /Android|webOS|iPhone|iPad|iPod|BlackBerry|Opera Mini|IEMobile/i.test(navigator.userAgent);
     };
     ChannelsComponent.prototype.getChannels = function () {
-        var url = cfg._vdrurl + ':8002/channels.json?start=0&limit=0';
+        var url = cfg._vdrurl + ':8002/channels.json?start=0&limit=61';
         console.log(url);
         return this._http.get(url).map(function (res) { return res.json(); });
     };
@@ -52,7 +52,7 @@ ChannelsComponent = __decorate([
     core_1.Component({
         selector: 'channels',
         template: "\n    <ul>\n        <li class=\"gallery\" *ngFor=\"let chan of channels\" (click)=\"this.dostream(chan)\">\n            <span>{{ chan.name }}</span>\n        </li>\n    </ul>\n    ",
-        styles: ["\n    ul {\n      list-style-type: none;\n    }\n    .gallery {\n        float: left;\n        padding: .2em;\n    }\n    .gallery a, span {\n        font-size: 16pt;\n        color: black;\n        background-color: lightgrey;\n        text-decoration: none;\n    }\n    "]
+        styles: ["\n    ul {\n      list-style-type: none;\n    }\n    .gallery {\n        float: left;\n        padding: .2em;\n    }\n    .gallery a, span {\n        font-size: 16pt;\n        color: black;\n        background-color: lightgrey;\n        text-decoration: none;\n    }\n    .gallery span:hover { \n        background-color: yellow;\n    }\n    "]
     }),
     __metadata("design:paramtypes", [http_1.Http, platform_browser_1.DomSanitizer])
 ], ChannelsComponent);

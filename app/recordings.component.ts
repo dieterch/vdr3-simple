@@ -27,6 +27,9 @@ import * as cfg from  './config';
         background-color: lightgrey;
         text-decoration: none;
     }
+    .gallery span:hover { 
+        background-color: lightblue;
+    }
     `]
 })
 export class RecordingsComponent implements OnInit {

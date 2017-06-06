@@ -53,7 +53,7 @@ RecordingsComponent = __decorate([
     core_1.Component({
         selector: 'recordings',
         template: "\n    <ul>\n        <li class=\"gallery\" *ngFor=\"let rec of recordings\" (click)=\"this.dostream(rec)\">\n            <span>{{ rec.event_title }}</span>\n        </li>\n    </ul>\n    ",
-        styles: ["\n    ul {\n      list-style-type: none;\n    }\n    .gallery {\n        float: left;\n        padding: .2em;\n    }\n    .gallery a, span {\n        font-size: 16pt;\n        color: black;\n        background-color: lightgrey;\n        text-decoration: none;\n    }\n    "]
+        styles: ["\n    ul {\n      list-style-type: none;\n    }\n    .gallery {\n        float: left;\n        padding: .2em;\n    }\n    .gallery a, span {\n        font-size: 16pt;\n        color: black;\n        background-color: lightgrey;\n        text-decoration: none;\n    }\n    .gallery span:hover { \n        background-color: lightblue;\n    }\n    "]
     }),
     __metadata("design:paramtypes", [http_1.Http, platform_browser_1.DomSanitizer])
 ], RecordingsComponent);
